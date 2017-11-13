@@ -15,10 +15,11 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import static com.sagar.android_projects.dagger2.MainActivity.TAG;
+import static com.sagar.android_projects.dagger2.activity.MainActivity.TAG;
 
 /**
  * Created by sagar on 11/13/2017.
+ * adapter for showing the repo list.
  */
 public class AdapterRepoList extends RecyclerView.Adapter<AdapterRepoList.ViewHolder> {
     private ArrayList<RepoResponse> data;

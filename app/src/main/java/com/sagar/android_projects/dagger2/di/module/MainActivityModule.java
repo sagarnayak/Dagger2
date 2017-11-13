@@ -1,6 +1,6 @@
 package com.sagar.android_projects.dagger2.di.module;
 
-import com.sagar.android_projects.dagger2.MainActivity;
+import com.sagar.android_projects.dagger2.activity.MainActivity;
 import com.sagar.android_projects.dagger2.adapter.AdapterRepoList;
 import com.sagar.android_projects.dagger2.di.scope.MainActivityScope;
 

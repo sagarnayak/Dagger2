@@ -1,4 +1,4 @@
-package com.sagar.android_projects.dagger2;
+package com.sagar.android_projects.dagger2.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 
+import com.sagar.android_projects.dagger2.R;
 import com.sagar.android_projects.dagger2.adapter.AdapterRepoList;
 import com.sagar.android_projects.dagger2.di.component.ApplicationComponent;
 import com.sagar.android_projects.dagger2.di.component.DaggerMainActivityComponent;
@@ -25,12 +25,26 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * created by SAGAR NAYAK on 13 NOV 2017.
+ * this is the launcher activity of the app.
+ * this activity get all the public repo list from the remote url and show it in a list.
+ * on clicking the item the details of the user will be shown in {@link DetailActivity}.
+ * the interface {@link APIInterface} is used for calling the apis along with the {@link retrofit2.Retrofit}
+ * for REST API call.
+ */
 public class MainActivity extends AppCompatActivity implements AdapterRepoList.CallBack {
 
+    /*
+    recyclerview for showing the data
+     */
     @SuppressWarnings("FieldCanBeLocal")
     private RecyclerView recyclerView;
     public static final String TAG = "OkHttp";
 
+    /*
+    DI component.
+     */
     MainActivityComponent mainActivityComponent;
 
     @Inject
